@@ -1,0 +1,8 @@
+\#!/bin/bash
+
+at now +1 minutes -f ./ping_test;
+last_tl=$(tail -f $HOME/report);
+tl=$(tail -n1);
+echo "${tl}";
+kill $(pgrep last_tl)
+
