@@ -2,11 +2,11 @@
 
 while true; do
 read LINE
-if [[$LINE == "TERM"]]
+if [[ $LINE == "TERM" ]]
 then Kill -SIGTERM $1
-else if [[$LINE == "+"]]
+else if [[ $LINE == "+" ]]
 then kill -USR1 $1
-else if [[$LINE == "*"]]
+else if [[ $LINE == "*" ]]
 then kill -USR2 $1
 else 
 then continue
